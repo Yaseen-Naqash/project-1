@@ -134,7 +134,7 @@ nav{
 
 .boxes{
     /* background-color: aqua; */
-    height: 500px;
+    height: fit-content;
     width: 65%;
     display: grid;
     margin: 100px auto;
@@ -164,7 +164,7 @@ nav{
     position: relative;
     width: 120px;
     height: 180px;
-    border: 2px solid var(--accent);
+    border: 2px solid var(--secondary);
     border-radius: 15px;
     rotate: -45deg;
     margin-top: 170px;
@@ -179,18 +179,56 @@ nav{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-70%);
-    color: var(--accent);
+    color: var(--secondary);
     transition: all 0.5s;
     
 }
 .box:hover {
-    border: 4px solid #6C0ABC; 
+    border: 4px solid var(--secondary); 
 
 }
 .box:hover .sheet{
     
-    background-color: var(--accent);
+    background-color: var(--secondary);
 }
 .box:hover .sheet i{
     color: var(--primary);
+}
+
+
+.floating-images{
+    display: flex;
+    width: 75%;
+    height: 300px;
+    margin: 0 auto;
+    gap: 10px;
+}
+.image-box{
+    position: relative;
+    padding: 25px;
+    width: 270px;
+    height: 290px;
+    border: 2px solid var(--secondary);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.image-box img{
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    rotate: 20deg;
+    width: 160px;
+    height: 160px;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.image-box:hover img{
+    rotate: 0deg;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%,0%);
 }
