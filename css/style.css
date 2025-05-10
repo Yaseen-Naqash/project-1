@@ -1,0 +1,133 @@
+:root {
+    --white: #ffffff;
+    --primary: #f9f9f9;
+    --secondary: #F16C67;
+    --accent: #6C0ABC;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url('../assets/fonts/AlegreyaSans-BoldItalic.ttf');
+}
+@font-face {
+    font-family: 'normal';
+    src: url('../assets/fonts/AlegreyaSans-BlackItalic.ttf');
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'bold';
+}
+
+p,a{
+    font-family: 'normal';
+}
+
+
+
+
+body{
+
+}
+
+nav{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-image: url(../assets/images/a.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.navigation{
+    width: 80%;
+    height: fit-content;
+    /* background-color: var(--accent); */
+    position: absolute;
+
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%,0%);
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+}
+.phone-number{
+    
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    border-radius: 20px;
+
+    text-decoration: none;
+    padding: 6px 10px;
+
+    /* background-color: none; */
+    transition: all 0.2s;
+}
+
+.phone-number:hover{
+    color: var(--primary);
+    background-color: var(--secondary);
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon-container{
+    background-color: var(--secondary);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+
+}
+.icon-container i{
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-60%,-40%);
+
+    color: var(--primary);
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.links{
+    display: flex;
+    gap: 10px;
+
+    font-size: small;
+}
+.links a{
+    text-decoration: none;
+    color: var(--primary);
+    transition: all 0.4s;
+}
+
+.links a:hover{
+    color: var(--accent);
+}
+
+
+
+
