@@ -39,8 +39,8 @@ body{
 nav{
     position: relative;
     width: 100%;
-    height: 450px;
-    background-image: url(../assets/images/a.jpg);
+    height: fit-content;
+    /* background-image: url(../assets/images/a.jpg); */
     background-position: center;
     background-size: cover;
 }
@@ -48,9 +48,12 @@ nav{
 .navigation{
     width: 80%;
     height: fit-content;
-    /* background-color: var(--accent); */
-    position: absolute;
-
+    background-color: var(--accent);
+    background: linear-gradient(90deg,var(--secondary) 30%, var(--primary) 100%);
+    border: 2px solid var(--secondary);
+    position: fixed;
+    padding: 10px 15px;
+    border-radius: 15px;
     top: 3%;
     left: 50%;
     transform: translate(-50%,0%);
@@ -129,5 +132,65 @@ nav{
 }
 
 
+.boxes{
+    /* background-color: aqua; */
+    height: 500px;
+    width: 65%;
+    display: grid;
+    margin: 100px auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+    row-gap: 0px;
+    column-gap: 15px;
+    
+}
 
+.box{
+    border-radius: 20px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.135);
+    transition: all 0.5s;
+}
+.special{
+    margin-top: 20px;
+    overflow: hidden;
 
+}
+
+.sheet{
+    position: relative;
+    width: 120px;
+    height: 180px;
+    border: 2px solid var(--accent);
+    border-radius: 15px;
+    rotate: -45deg;
+    margin-top: 170px;
+    margin-left: 220px;
+    transition: all 0.5s;
+    
+    
+
+}
+.sheet i{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-70%);
+    color: var(--accent);
+    transition: all 0.5s;
+    
+}
+.box:hover {
+    border: 4px solid #6C0ABC; 
+
+}
+.box:hover .sheet{
+    
+    background-color: var(--accent);
+}
+.box:hover .sheet i{
+    color: var(--primary);
+}
