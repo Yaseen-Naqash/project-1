@@ -1,9 +1,8 @@
 :root {
     --white: #ffffff;
     --primary: #f9f9f9;
-    --secondary: #F16C67;
+    --secondary: #ff5c1b;
     --accent: #6C0ABC;
-
 }
 
 *{
@@ -62,7 +61,11 @@ nav{
     flex-direction: row;
     gap: 10px;
     justify-content: space-between;
+    overflow: hidden;
+    z-index: 1;
 }
+
+
 .phone-number{
     
     color: var(--secondary);
@@ -231,4 +234,121 @@ nav{
     bottom: 10px;
     left: 50%;
     transform: translate(-50%,0%);
+}
+
+
+/* section 3 */
+
+.container{
+    width: 75%;
+    margin: 0 auto;
+    height: fit-content;
+    border: 2px solid var(--secondary);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+}
+.my-title{
+    color: var(--secondary);
+    text-align: center;
+    margin: 15px;
+}
+
+
+.input-container{
+    width: 80%;
+    margin: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.input-container input{
+    width: 100%;
+    padding: 7px;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    outline: none;
+}
+.input-container textarea{
+    width: 100%;
+    padding: 7px;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+.input-container label{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0%,-50%);
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--primary);
+    transition: all 0.3s;
+    opacity: 0.5;
+}
+.input-container .textarea-label{
+    top: 10%;
+    transform: translate(0%,-50%);
+}
+
+
+ /* .input-container input:focus + label{
+    top: -10%;
+    padding: 5px;
+    opacity: 1;
+    background-color: var(--primary);
+} */
+
+/* When input has content (not just placeholder space) */
+.input-container input:not(:placeholder-shown) + label , .input-container input:focus + label{
+    top: 0%;
+    padding: 5px;
+    opacity: 1;
+    background-color: white;
+}
+.input-container textarea:not(:placeholder-shown) + label , .input-container textarea:focus + label{
+    top: 0%;
+    padding: 5px;
+    opacity: 1;
+    background-color: white;
+    
+}
+
+.card{
+    margin: 20px 0px;
+    width: 120px;
+    height: 180px;
+    border: 2px solid var(--secondary);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+
+}
+.child{
+    position: absolute;
+    bottom: -60%;
+    height: 140px;
+    background-color: var(--secondary);
+    width: 100%;
+    transition: all 0.5s;
+    border-radius: 15px;
+}
+
+.child:hover{
+    bottom: 0;
 }
