@@ -1,0 +1,59 @@
+.pc-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+    align-items: start;
+    height: 50px;
+    overflow: hidden;
+
+}
+
+.mobile-nav{
+    height: 100vh;
+    width: 200px;
+    background-color: aqua;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1s;
+    
+}
+.mobile-nav .links{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+}
+
+.my-toggle-menu{
+    display: none;
+}
+@media (max-width:730px) {
+    .pc-nav{
+        display: none;
+    }
+    .my-toggle-menu{
+        display: flex;
+    }
+}
+.my-toggle-close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+.fake-parent{
+    width: 100%;
+    position: relative;
+    height: 50px;
+}
+
+.mobile-nav-closed{
+
+    left: -250px;
+}

@@ -64,29 +64,6 @@ nav{
     z-index: 1;
 }
 
-.navigation2{
-    background: linear-gradient(90deg,var(--accent) 30%, var(--primary) 100%);
-    border: 2px solid var(--accent);
-}
-.navigation2 .phone-number{
-    color: var(--accent);
-    border: 2px solid var(--accent);
-}
-.navigation2 .phone-number:hover{
-    color: var(--primary);
-    background-color: var(--accent);
-}
-.navigation2 .icon-container i{
-
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-60%,-40%);
-
-    color: var(--primary);
-}
-
-
 
 .phone-number{
     
@@ -106,10 +83,6 @@ nav{
     background-color: var(--secondary);
 }
 
-.navigation2 .icon-container{
-    background-color: var(--accent);
-
-}
 
 .right{
     display: flex;
@@ -390,4 +363,62 @@ nav{
     width: 100px;
     height: 30px;
     background-color: aqua;
+}
+
+@media (max-width:730px) {
+
+    .mobile-navigation{
+        display: none;
+    }
+    
+}
+
+
+.mobile-navigation{
+    height: 100vh;
+    width: 400px;
+    background-color: var(--secondary);
+    position: sticky;
+    right: 0;
+    z-index: 100;
+
+}
+.mobile-navigation .left{
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+}
+.mobile-navigation .links{
+    flex-direction: column;
+}
+
+.mobile-navigation .phone-number{
+    color: var(--primary);
+    border: 2px solid var(--primary);
+
+}
+
+
+.phone-number:hover{
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+ .icon-container{
+    background-color: var(--primary);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+
+}
+.icon-container i{
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-60%,-40%);
+
+    color: var(--primary);
 }
